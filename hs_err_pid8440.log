@@ -1,0 +1,597 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000000038a7d9, pid=8440, tid=8764
+#
+# JRE version: 6.0_25-b06
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (20.0-b11 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [SlikSvn-libapr-1.dll+0x1a7d9]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000075c800):  JavaThread "main" [_thread_in_native, id=8764, stack(0x0000000002b80000,0x0000000002c80000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000000000008
+
+Registers:
+RAX=0x0000000000000000, RBX=0x0000000002c7ee80, RCX=0x0000000002c7ee80, RDX=0x0000000000000000
+RSP=0x0000000002c7ee20, RBP=0x0000000002c7f810, RSI=0x00000000a035ff88, RDI=0x0000000002c7ef60
+R8 =0x000007fefafd2fb8, R9 =0x000007fefafd2eb8, R10=0x0000000002c91339, R11=0x000000006da924f0
+R12=0x000007fefafd2eb8, R13=0x000007fefafd2fb8, R14=0x0000000002c7f830, R15=0x000000000075c800
+RIP=0x000000000038a7d9, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x0000000002c7ee20)
+0x0000000002c7ee20:   0000000000690650 0000000000000000
+0x0000000002c7ee30:   0000000002c7ef92 0000000000000000
+0x0000000002c7ee40:   000000000075c9d0 000007fefafb4490
+0x0000000002c7ee50:   00000000eab5aa40 00000000005a027c
+0x0000000002c7ee60:   00000000005a06e0 0000000002c858fa
+0x0000000002c7ee70:   000000000075c9d0 000007fefafb5b83
+0x0000000002c7ee80:   0000000000000000 0000000002c7ef90
+0x0000000002c7ee90:   000007fefafdae70 0000000000000000
+0x0000000002c7eea0:   fffffffffffffffe 0000000077b484a5
+0x0000000002c7eeb0:   0000000002c7ef60 000007fefafb411f
+0x0000000002c7eec0:   0000000000750200 000000000075c9d0
+0x0000000002c7eed0:   0000000002c7f810 00000000a035ff88
+0x0000000002c7eee0:   0000007800e20000 0000000000000000
+0x0000000002c7eef0:   fffffffffffffffe 00000000a01deff0
+0x0000000002c7ef00:   0000000000000000 00000000a01de901
+0x0000000002c7ef10:   00000000a036a198 0000000000000000 
+
+Instructions: (pc=0x000000000038a7d9)
+0x000000000038a7b9:   00 48 8b 5c 24 30 05 80 fc 0a 00 48 83 c4 20 5f
+0x000000000038a7c9:   c3 cc cc cc cc cc cc 40 53 48 83 ec 20 48 8b d9
+0x000000000038a7d9:   8b 4a 08 ff 15 c6 2b 00 00 48 89 03 48 85 c0 75
+0x000000000038a7e9:   0a ff 15 50 29 00 00 85 c0 75 08 33 c0 48 83 c4 
+
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x0000000002c7ee80 is pointing into the stack for thread: 0x000000000075c800
+RCX=0x0000000002c7ee80 is pointing into the stack for thread: 0x000000000075c800
+RDX=0x0000000000000000 is an unknown value
+RSP=0x0000000002c7ee20 is pointing into the stack for thread: 0x000000000075c800
+RBP=0x0000000002c7f810 is pointing into the stack for thread: 0x000000000075c800
+RSI=0x00000000a035ff88 is an oop
+{constant pool} 
+ - klass: {other class}
+ - cache: 0x00000000a0368788
+ -   1 :  : klass_index=275 name_and_type_index=276
+ -   2 :  : 'java/lang/ClassNotFoundException'
+ -   3 :  : 'java/lang/NoClassDefFoundError'
+ -   4 :  : klass_index=2 name_and_type_index=279
+ -   5 :  : klass_index=3 name_and_type_index=280
+ -   6 :  : klass_index=88 name_and_type_index=281
+ -   7 :  : 'org/tigris/subversion/javahl/SVNClient' {0xa036f260}
+ -   8 :  : klass_index=7 name_and_type_index=281
+ -   9 :  : klass_index=87 name_and_type_index=283
+ -  10 :  : klass_index=7 name_and_type_index=284
+ -  11 :  : klass_index=87 name_and_type_index=285
+ -  12 :  : klass_index=7 name_and_type_index=286
+ -  13 :  : klass_index=7 name_and_type_index=287
+ -  14 :  : klass_index=7 name_and_type_index=288
+ -  15 :  : klass_index=7 name_and_type_index=289
+ -  16 :  : klass_index=7 name_and_type_index=290
+ -  17 :  : klass_index=7 name_and_type_index=291
+ -  18 :  : klass_index=7 name_and_type_index=292
+ -  19 :  : klass_index=7 name_and_type_index=293
+ -  20 :  : klass_index=7 name_and_type_index=294
+ -  21 :  : klass_index=7 name_and_type_index=295
+ -  22 :  : klass_index=7 name_and_type_index=296
+ -  23 :  : klass_index=7 name_and_type_index=297
+ -  24 :  : klass_index=7 name_and_type_index=298
+ -  25 :  : klass_index=7 name_and_type_index=299
+ -  26 :  : klass_index=7 name_and_type_index=300
+ -  27 :  : klass_index=7 name_and_type_index=301
+ -  28 :  : klass_index=7 name_and_type_index=302
+ -  29 :  : klass_index=7 name_and_type_index=303
+ -  30 :  : klass_index=7 name_and_type_index=304
+ -  31 :  : klass_index=7 name_and_type_index=305
+ -  32 :  : klass_index=7 name_and_type_index=306
+ -  33 :  : klass_index=7 name_and_type_index=307
+ -  34 :  : klass_index=7 name_and_type_index=308
+ -  35 :  : klass_index=7 name_and_type_index=309
+ -  36 :  : klass_index=7 name_and_type_index=310
+ -  37 :  : klass_index=7 name_and_type_index=311
+ -  38 :  : klass_index=7 name_and_type_index=312
+ -  39 :  : klass_index=7 name_and_type_index=313
+ -  40 :  : klass_index=7 name_and_type_index=314
+ -  41 :  : klass_index=7 name_and_type_index=315
+ -  42 :  : klass_index=7 name_and_type_index=316
+ -  43 :  : klass_index=7 name_and_type_index=317
+ -  44 :  : klass_index=7 name_and_type_index=318
+ -  45 :  : klass_index=7 name_and_type_index=319
+ -  46 :  : klass_index=7 name_and_type_index=320
+ -  47 :  : klass_index=7 name_and_type_index=321
+ -  48 :  : klass_index=7 name_and_type_index=322
+ -  49 :  : klass_index=7 name_and_type_index=323
+ -  50 :  : klass_index=7 name_and_type_index=324
+ -  51 :  : klass_index=7 name_and_type_index=325
+ -  52 :  : klass_index=7 name_and_type_index=326
+ -  53 :  : klass_index=7 name_and_type_index=327
+ -  54 :  : klass_index=87 name_and_type_index=328
+ -  55 :  : klass_index=7 name_and_type_index=329
+ -  56 :  : klass_index=7 name_and_type_index=330
+ -  57 :  : klass_index=7 name_and_type_index=331
+ -  58 :  : klass_index=7 name_and_type_index=332
+ -  59 :  : klass_index=7 name_and_type_index=333
+ -  60 :  : klass_index=7 name_and_type_index=334
+ -  61 :  : klass_index=7 name_and_type_index=335
+ -  62 :  : klass_index=7 name_and_type_index=336
+ -  63 :  : klass_index=7 name_and_type_index=337
+ -  64 :  : klass_index=7 name_and_type_index=338
+ -  65 :  : klass_index=7 name_and_type_index=339
+ -  66 :  : klass_index=7 name_and_type_index=340
+ -  67 :  : klass_index=7 name_and_type_index=341
+ -  68 :  : klass_index=7 name_and_type_index=342
+ -  69 :  : klass_index=7 name_and_type_index=343
+ -  70 :  : klass_index=7 name_and_type_index=344
+ -  71 :  : klass_index=7 name_and_type_index=345
+ -  72 :  : klass_index=7 name_and_type_index=346
+ -  73 :  : klass_index=7 name_and_type_index=347
+ -  74 :  : klass_index=7 name_and_type_index=348
+ -  75 :  : klass_index=7 name_and_type_index=349
+ -  76 :  : klass_index=7 name_and_type_index=350
+ -  77 :  : klass_index=7 name_and_type_index=351
+ -  78 :  : klass_index=7 name_and_type_index=352
+ -  79 :  : klass_index=7 name_and_type_index=353
+ -  80 :  : klass_index=7 name_and_type_index=354
+ -  81 :  : klass_index=7 name_and_type_index=355
+ -  82 :  : klass_index=7 name_and_type_index=356
+ -  83 :  : klass_index=7 name_and_type_index=357
+ -  84 :  : klass_index=87 name_and_type_index=358
+ -  85 :  : "org.tigris.subversion.javahl.SVNClientSynchronized" {0xa03691f0}
+ -  86 :  : klass_index=87 name_and_type_index=360
+ -  87 :  : 'org/tigris/subversion/javahl/SVNClientSynchronized' {0xa0367fc0}
+ -  88 :  : 'java/lang/Object' {0xa0008e58}
+ -  89 :  : 'org/tigris/subversion/javahl/SVNClientInterface'
+ -  90 :  : 'worker'
+ -  91 :  : 'Lorg/tigris/subversion/javahl/SVNClient;'
+ -  92 :  : 'clazz'
+ -  93 :  : 'Ljava/lang/Class;'
+ -  94 :  : 'class$org$tigris$subversion$javahl$SVNClientSynchronized'
+ -  95 :  : 'Synthetic'
+ -  96 :  : '<init>'
+ -  97 :  : '()V'
+ -  98 :  : 'Code'
+ -  99 :  : 'LineNumberTable'
+ - 100 :  : 'LocalVariableTable'
+ - 101 :  : 'this'
+ - 102 :  : 'Lorg/tigris/subversion/javahl/SVNClientSynchronized;'
+ - 103 :  : 'dispose'
+ - 104 :  : 'getLastPath'
+ - 105 :  : '()Ljava/lang/String;'
+ - 106 :  : 'Deprecated'
+ - 107 :  : 'status'
+ - 108 :  : '(Ljava/lang/String;ZZZ)[Lorg/tigris/subversion/javahl/Status;'
+ - 109 :  : 'path'
+ - 110 :  : 'Ljava/lang/String;'
+ - 111 :  : 'descend'
+ - 112 :  : 'Z'
+ - 113 :  : 'onServer'
+ - 114 :  : 'getAll'
+ - 115 :  : 'Exceptions'
+ - 116 :  : 'org/tigris/subversion/javahl/ClientException'
+ - 117 :  : '(Ljava/lang/String;ZZZZ)[Lorg/tigris/subversion/javahl/Status;'
+ - 118 :  : 'noIgnore'
+ - 119 :  : '(Ljava/lang/String;ZZZZZ)[Lorg/tigris/subversion/javahl/Status;'
+ - 120 :  : 'ignoreExternals'
+ - 121 :  : 'list'
+ - 122 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Z)[Lorg/tigris/subversion/javahl/DirEntry;'
+ - 123 :  : 'url'
+ - 124 :  : 'revision'
+ - 125 :  : 'Lorg/tigris/subversion/javahl/Revision;'
+ - 126 :  : 'recurse'
+ - 127 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;Z)[Lorg/tigris/subversion/javahl/DirEntry;'
+ - 128 :  : 'pegRevision'
+ - 129 :  : 'singleStatus'
+ - 130 :  : '(Ljava/lang/String;Z)Lorg/tigris/subversion/javahl/Status;'
+ - 131 :  : 'username'
+ - 132 :  : '(Ljava/lang/String;)V'
+ - 133 :  : 'password'
+ - 134 :  : 'setPrompt'
+ - 135 :  : '(Lorg/tigris/subversion/javahl/PromptUserPassword;)V'
+ - 136 :  : 'prompt'
+ - 137 :  : 'Lorg/tigris/subversion/javahl/PromptUserPassword;'
+ - 138 :  : 'logMessages'
+ - 139 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;)[Lorg/tigris/subversion/javahl/LogMessage;'
+ - 140 :  : 'revisionStart'
+ - 141 :  : 'revisionEnd'
+ - 142 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;Z)[Lorg/tigris/subversion/javahl/LogMessage;'
+ - 143 :  : 'stopOnCopy'
+ - 144 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;ZZ)[Lorg/tigris/subversion/javahl/LogMessage;'
+ - 145 :  : 'discoverPath'
+ - 146 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;ZZJ)[Lorg/tigris/subversion/javahl/LogMessage;'
+ - 147 :  : 'limit'
+ - 148 :  : 'J'
+ - 149 :  : 'checkout'
+ - 150 :  : '(Ljava/lang/String;Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;ZZ)J'
+ - 151 :  : 'moduleName'
+ - 152 :  : 'destPath'
+ - 153 :  : '(Ljava/lang/String;Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Z)J'
+ - 154 :  : 'notification'
+ - 155 :  : '(Lorg/tigris/subversion/javahl/Notify;)V'
+ - 156 :  : 'notify'
+ - 157 :  : 'Lorg/tigris/subversion/javahl/Notify;'
+ - 158 :  : 'notification2'
+ - 159 :  : '(Lorg/tigris/subversion/javahl/Notify2;)V'
+ - 160 :  : 'Lorg/tigris/subversion/javahl/Notify2;'
+ - 161 :  : 'commitMessageHandler'
+ - 162 :  : '(Lorg/tigris/subversion/javahl/CommitMessage;)V'
+ - 163 :  : 'messageHandler'
+ - 164 :  : 'Lorg/tigris/subversion/javahl/CommitMessage;'
+ - 165 :  : 'remove'
+ - 166 :  : '([Ljava/lang/String;Ljava/lang/String;Z)V'
+ - 167 :  : '[Ljava/lang/String;'
+ - 168 :  : 'message'
+ - 169 :  : 'force'
+ - 170 :  : 'revert'
+ - 171 :  : '(Ljava/lang/String;Z)V'
+ - 172 :  : 'add'
+ - 173 :  : '(Ljava/lang/String;ZZ)V'
+ - 174 :  : 'update'
+ - 175 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Z)J'
+ - 176 :  : '([Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;ZZ)[J'
+ - 177 :  : 'commit'
+ - 178 :  : '([Ljava/lang/String;Ljava/lang/String;Z)J'
+ - 179 :  : 'copy'
+ - 180 :  : '(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;)V'
+ - 181 :  : 'srcPath'
+ - 182 :  : 'move'
+ - 183 :  : '(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Z)V'
+ - 184 :  : '(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V'
+ - 185 :  : 'mkdir'
+ - 186 :  : '([Ljava/lang/String;Ljava/lang/String;)V'
+ - 187 :  : 'cleanup'
+ - 188 :  : 'resolved'
+ - 189 :  : 'doExport'
+ - 190 :  : '(Ljava/lang/String;Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;ZZZLjava/lang/String;)J'
+ - 191 :  : 'nativeEOL'
+ - 192 :  : 'doSwitch'
+ - 193 :  : 'doImport'
+ - 194 :  : 'merge'
+ - 195 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Ljava/lang/String;ZZ)V'
+ - 196 :  : 'path1'
+ - 197 :  : 'revision1'
+ - 198 :  : 'path2'
+ - 199 :  : 'revision2'
+ - 200 :  : 'localPath'
+ - 201 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Ljava/lang/String;ZZZZ)V'
+ - 202 :  : 'ignoreAncestry'
+ - 203 :  : 'dryRun'
+ - 204 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;Ljava/lang/String;ZZZZ)V'
+ - 205 :  : 'diff'
+ - 206 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Ljava/lang/String;Z)V'
+ - 207 :  : 'target1'
+ - 208 :  : 'target2'
+ - 209 :  : 'outFileName'
+ - 210 :  : 'noDiffDeleted'
+ - 211 :  : 'target'
+ - 212 :  : 'startRevision'
+ - 213 :  : 'endRevision'
+ - 214 :  : 'properties'
+ - 215 :  : '(Ljava/lang/String;)[Lorg/tigris/subversion/javahl/PropertyData;'
+ - 216 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;)[Lorg/tigris/subversion/javahl/PropertyData;'
+ - 217 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;)[Lorg/tigris/subversion/javahl/PropertyData;'
+ - 218 :  : 'propertySet'
+ - 219 :  : 'name'
+ - 220 :  : 'value'
+ - 221 :  : '(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V'
+ - 222 :  : '(Ljava/lang/String;Ljava/lang/String;[BZ)V'
+ - 223 :  : '[B'
+ - 224 :  : '(Ljava/lang/String;Ljava/lang/String;[BZZ)V'
+ - 225 :  : 'propertyRemove'
+ - 226 :  : '(Ljava/lang/String;Ljava/lang/String;Z)V'
+ - 227 :  : 'propertyCreate'
+ - 228 :  : 'revProperty'
+ - 229 :  : '(Ljava/lang/String;Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;)Lorg/tigris/subversion/javahl/PropertyData;'
+ - 230 :  : 'rev'
+ - 231 :  : 'revProperties'
+ - 232 :  : 'setRevProperty'
+ - 233 :  : '(Ljava/lang/String;Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Ljava/lang/String;Z)V'
+ - 234 :  : 'propertyGet'
+ - 235 :  : '(Ljava/lang/String;Ljava/lang/String;)Lorg/tigris/subversion/javahl/PropertyData;'
+ - 236 :  : '(Ljava/lang/String;Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;)Lorg/tigris/subversion/javahl/PropertyData;'
+ - 237 :  : 'fileContent'
+ - 238 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;)[B'
+ - 239 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;)[B'
+ - 240 :  : 'relocate'
+ - 241 :  : 'from'
+ - 242 :  : 'to'
+ - 243 :  : 'blame'
+ - 244 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/BlameCallback;)V'
+ - 245 :  : 'callback'
+ - 246 :  : 'Lorg/tigris/subversion/javahl/BlameCallback;'
+ - 247 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/BlameCallback;)V'
+ - 248 :  : 'setConfigDirectory'
+ - 249 :  : 'configDir'
+ - 250 :  : 'getConfigDirectory'
+ - 251 :  : 'cancelOperation'
+ - 252 :  : 'info'
+ - 253 :  : '(Ljava/lang/String;)Lorg/tigris/subversion/javahl/Info;'
+ - 254 :  : '([Ljava/lang/String;Ljava/lang/String;ZZ)J'
+ - 255 :  : 'noUnlock'
+ - 256 :  : 'lock'
+ - 257 :  : 'comment'
+ - 258 :  : 'unlock'
+ - 259 :  : '([Ljava/lang/String;Z)V'
+ - 260 :  : 'info2'
+ - 261 :  : '(Ljava/lang/String;Lorg/tigris/subversion/javahl/Revision;Lorg/tigris/subversion/javahl/Revision;Z)[Lorg/tigris/subversion/javahl/Info2;'
+ - 262 :  : 'pathOrUrl'
+ - 263 :  : 'getVersionInfo'
+ - 264 :  : '(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;'
+ - 265 :  : 'trailUrl'
+ - 266 :  : 'lastChanged'
+ - 267 :  : 'class$'
+ - 268 :  : '(Ljava/lang/String;)Ljava/lang/Class;'
+ - 269 :  : 'x1'
+ - 270 :  : 'Ljava/lang/ClassNotFoundException;'
+ - 271 :  : 'x0'
+ - 272 :  : '<clinit>'
+ - 273 :  : 'SourceFile'
+ - 274 :  : 'SVNClientSynchronized.java'
+ - 275 :  : 'java/lang/Class' {0xa00212f8}
+ - 276 :  : name_index=366 signature_index=268
+ - 277 :  : 'java/lang/ClassNotFoundException'
+ - 278 :  : 'java/lang/NoClassDefFoundError'
+ - 279 :  : name_index=367 signature_index=105
+ - 280 :  : name_index=96 signature_index=132
+ - 281 :  : name_index=96 signature_index=97
+ - 282 :  : 'org/tigris/subversion/javahl/SVNClient'
+ - 283 :  : name_index=90 signature_index=91
+ - 284 :  : name_index=103 signature_index=97
+ - 285 :  : name_index=92 signature_index=93
+ - 286 :  : name_index=104 signature_index=105
+ - 287 :  : name_index=107 signature_index=108
+ - 288 :  : name_index=107 signature_index=117
+ - 289 :  : name_index=107 signature_index=119
+ - 290 :  : name_index=121 signature_index=122
+ - 291 :  : name_index=121 signature_index=127
+ - 292 :  : name_index=129 signature_index=130
+ - 293 :  : name_index=131 signature_index=132
+ - 294 :  : name_index=133 signature_index=132
+ - 295 :  : name_index=134 signature_index=135
+ - 296 :  : name_index=138 signature_index=144
+ - 297 :  : name_index=138 signature_index=146
+ - 298 :  : name_index=149 signature_index=150
+ - 299 :  : name_index=149 signature_index=153
+ - 300 :  : name_index=154 signature_index=155
+ - 301 :  : name_index=158 signature_index=159
+ - 302 :  : name_index=161 signature_index=162
+ - 303 :  : name_index=165 signature_index=166
+ - 304 :  : name_index=170 signature_index=171
+ - 305 :  : name_index=172 signature_index=171
+ - 306 :  : name_index=172 signature_index=173
+ - 307 :  : name_index=174 signature_index=175
+ - 308 :  : name_index=174 signature_index=176
+ - 309 :  : name_index=177 signature_index=254
+ - 310 :  : name_index=179 signature_index=180
+ - 311 :  : name_index=182 signature_index=183
+ - 312 :  : name_index=182 signature_index=184
+ - 313 :  : name_index=185 signature_index=186
+ - 314 :  : name_index=187 signature_index=132
+ - 315 :  : name_index=188 signature_index=171
+ - 316 :  : name_index=189 signature_index=153
+ - 317 :  : name_index=189 signature_index=190
+ - 318 :  : name_index=192 signature_index=153
+ - 319 :  : name_index=193 signature_index=184
+ - 320 :  : name_index=194 signature_index=195
+ - 321 :  : name_index=194 signature_index=201
+ - 322 :  : name_index=194 signature_index=204
+ - 323 :  : name_index=205 signature_index=206
+ - 324 :  : name_index=205 signature_index=201
+ - 325 :  : name_index=205 signature_index=204
+ - 326 :  : name_index=214 signature_index=215
+ - 327 :  : name_index=214 signature_index=216
+ - 328 :  : name_index=214 signature_index=217
+ - 329 :  : name_index=218 signature_index=184
+ - 330 :  : name_index=218 signature_index=221
+ - 331 :  : name_index=218 signature_index=222
+ - 332 :  : name_index=218 signature_index=224
+ - 333 :  : name_index=225 signature_index=226
+ - 334 :  : name_index=227 signature_index=184
+ - 335 :  : name_index=227 signature_index=221
+ - 336 :  : name_index=227 signature_index=222
+ - 337 :  : name_index=227 signature_index=224
+ - 338 :  : name_index=228 signature_index=229
+ - 339 :  : name_index=231 signature_index=216
+ - 340 :  : name_index=232 signature_index=233
+ - 341 :  : name_index=234 signature_index=235
+ - 342 :  : name_index=234 signature_index=229
+ - 343 :  : name_index=234 signature_index=236
+ - 344 :  : name_index=237 signature_index=238
+ - 345 :  : name_index=237 signature_index=239
+ - 346 :  : name_index=240 signature_index=184
+ - 347 :  : name_index=243 signature_index=239
+ - 348 :  : name_index=243 signature_index=244
+ - 349 :  : name_index=243 signature_index=247
+ - 350 :  : name_index=248 signature_index=132
+ - 351 :  : name_index=250 signature_index=105
+ - 352 :  : name_index=251 signature_index=97
+ - 353 :  : name_index=252 signature_index=253
+ - 354 :  : name_index=256 signature_index=166
+ - 355 :  : name_index=258 signature_index=259
+ - 356 :  : name_index=260 signature_index=261
+ - 357 :  : name_index=263 signature_index=264
+ - 358 :  : name_index=94 signature_index=93
+ - 359 :  : 'org.tigris.subversion.javahl.SVNClientSynchronized'
+ - 360 :  : name_index=267 signature_index=268
+ - 361 :  : 'org/tigris/subversion/javahl/SVNClientSynchronized'
+ - 362 :  : 'java/lang/Object'
+ - 363 :  : 'org/tigris/subversion/javahl/SVNClientInterface'
+ - 364 :  : 'org/tigris/subversion/javahl/ClientException'
+ - 365 :  : 'java/lang/Class'
+ - 366 :  : 'forName'
+ - 367 :  : 'getMessage'
+
+RDI=0x0000000002c7ef60 is pointing into the stack for thread: 0x000000000075c800
+R8 =0x000007fefafd2fb8 is an unknown value
+R9 =0x000007fefafd2eb8 is an unknown value
+R10=0x0000000002c91339 is an Interpreter codelet
+method entry point (kind = native)  [0x0000000002c910c0, 0x0000000002c91940]  2176 bytes
+R11=0x000000006da924f0 is an unknown value
+R12=0x000007fefafd2eb8 is an unknown value
+R13=0x000007fefafd2fb8 is an unknown value
+R14=0x0000000002c7f830 is pointing into the stack for thread: 0x000000000075c800
+R15=0x000000000075c800 is a thread
+
+
+Stack: [0x0000000002b80000,0x0000000002c80000],  sp=0x0000000002c7ee20,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [SlikSvn-libapr-1.dll+0x1a7d9]  apr_threadkey_private_get+0x9
+j  org.tigris.subversion.javahl.SVNClient.<init>()V+6
+j  org.tigris.subversion.javahl.SVNClientSynchronized.<init>()V+9
+j  org.tigris.subversion.svnclientadapter.javahl.JhlClientAdapter.isAvailable()Z+563
+j  org.tigris.subversion.svnclientadapter.javahl.JhlClientAdapterFactory.setup()V+0
+j  com.sdxz.svn.SVN.setup()V+0
+j  com.sdxz.svn.Synchronizer.main([Ljava/lang/String;)V+0
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x1e9a17]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  org.tigris.subversion.javahl.SVNClient.ctNative()J+0
+j  org.tigris.subversion.javahl.SVNClient.<init>()V+6
+j  org.tigris.subversion.javahl.SVNClientSynchronized.<init>()V+9
+j  org.tigris.subversion.svnclientadapter.javahl.JhlClientAdapter.isAvailable()Z+563
+j  org.tigris.subversion.svnclientadapter.javahl.JhlClientAdapterFactory.setup()V+0
+j  com.sdxz.svn.SVN.setup()V+0
+j  com.sdxz.svn.Synchronizer.main([Ljava/lang/String;)V+0
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000006ead000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=8384, stack(0x0000000007440000,0x0000000007540000)]
+  0x0000000006ea1000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=1412, stack(0x0000000007340000,0x0000000007440000)]
+  0x0000000006e9c000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=8992, stack(0x0000000007240000,0x0000000007340000)]
+  0x0000000006e54000 JavaThread "Attach Listener" daemon [_thread_blocked, id=8980, stack(0x0000000007140000,0x0000000007240000)]
+  0x0000000006e4e800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=7160, stack(0x0000000007040000,0x0000000007140000)]
+  0x000000000069e000 JavaThread "Finalizer" daemon [_thread_blocked, id=8928, stack(0x0000000006d40000,0x0000000006e40000)]
+  0x0000000000697000 JavaThread "Reference Handler" daemon [_thread_blocked, id=4612, stack(0x0000000006c40000,0x0000000006d40000)]
+=>0x000000000075c800 JavaThread "main" [_thread_in_native, id=8764, stack(0x0000000002b80000,0x0000000002c80000)]
+
+Other Threads:
+  0x0000000000691000 VMThread [stack: 0x0000000006b40000,0x0000000006c40000] [id=5364]
+  0x0000000006ebd800 WatcherThread [stack: 0x0000000007540000,0x0000000007640000] [id=3252]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 18624K, used 968K [0x00000000eaab0000, 0x00000000ebf70000, 0x0000000100000000)
+  eden space 16000K, 6% used [0x00000000eaab0000,0x00000000eaba2170,0x00000000eba50000)
+  from space 2624K, 0% used [0x00000000ebce0000,0x00000000ebce0000,0x00000000ebf70000)
+  to   space 2624K, 0% used [0x00000000eba50000,0x00000000eba50000,0x00000000ebce0000)
+ PSOldGen        total 42496K, used 0K [0x00000000c0000000, 0x00000000c2980000, 0x00000000eaab0000)
+  object space 42496K, 0% used [0x00000000c0000000,0x00000000c0000000,0x00000000c2980000)
+ PSPermGen       total 21248K, used 3519K [0x00000000a0000000, 0x00000000a14c0000, 0x00000000c0000000)
+  object space 21248K, 16% used [0x00000000a0000000,0x00000000a036fe40,0x00000000a14c0000)
+
+Code Cache  [0x0000000002c80000, 0x0000000002ef0000, 0x0000000005c80000)
+ total_blobs=188 nmethods=2 adapters=140 free_code_cache=49936128 largest_free_block=6656
+
+Dynamic libraries:
+0x0000000000400000 - 0x000000000042e000 	C:\Program Files\Java\jdk1.6.0_25\bin\javaw.exe
+0x0000000077af0000 - 0x0000000077c99000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00000000779d0000 - 0x0000000077aef000 	C:\Windows\system32\kernel32.dll
+0x000007fefdaf0000 - 0x000007fefdb5c000 	C:\Windows\system32\KERNELBASE.dll
+0x000007feffd20000 - 0x000007feffdfb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007feffa90000 - 0x000007feffb2f000 	C:\Windows\system32\msvcrt.dll
+0x000007feff940000 - 0x000007feff95f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feff440000 - 0x000007feff56d000 	C:\Windows\system32\RPCRT4.dll
+0x00000000778d0000 - 0x00000000779ca000 	C:\Windows\system32\USER32.dll
+0x000007feff670000 - 0x000007feff6d7000 	C:\Windows\system32\GDI32.dll
+0x000007fefe050000 - 0x000007fefe05e000 	C:\Windows\system32\LPK.dll
+0x000007fefefe0000 - 0x000007feff0a9000 	C:\Windows\system32\USP10.dll
+0x000007fefd8d0000 - 0x000007fefd927000 	C:\Windows\system32\apphelp.dll
+0x000007fef77c0000 - 0x000007fef7811000 	C:\Windows\AppPatch\AppPatch64\AcGenral.DLL
+0x000007fefd8a0000 - 0x000007fefd8c5000 	C:\Windows\system32\SspiCli.dll
+0x000007feff100000 - 0x000007feff171000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefde10000 - 0x000007fefe013000 	C:\Windows\system32\ole32.dll
+0x000007fefe250000 - 0x000007fefefd8000 	C:\Windows\system32\SHELL32.dll
+0x0000000072cc0000 - 0x0000000072cc3000 	C:\Windows\system32\sfc.dll
+0x000007fef77b0000 - 0x000007fef77c0000 	C:\Windows\system32\sfc_os.DLL
+0x000007fefc810000 - 0x000007fefc82e000 	C:\Windows\system32\USERENV.dll
+0x000007fefda40000 - 0x000007fefda4f000 	C:\Windows\system32\profapi.dll
+0x000007fefbc80000 - 0x000007fefbc98000 	C:\Windows\system32\dwmapi.dll
+0x000007fef89e0000 - 0x000007fef89f8000 	C:\Windows\system32\MPR.dll
+0x000007fefe020000 - 0x000007fefe04e000 	C:\Windows\system32\IMM32.DLL
+0x000007feffb30000 - 0x000007feffc39000 	C:\Windows\system32\MSCTF.dll
+0x000007fefda00000 - 0x000007fefda3c000 	C:\Windows\system32\nvinitx.dll
+0x000000000f000000 - 0x000000000f006000 	C:\Program Files\NVIDIA Corporation\CoProcManager\_etoured.dll
+0x000007fefac50000 - 0x000007fefac94000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvd3d9wrapx.dll
+0x000007fefe070000 - 0x000007fefe247000 	C:\Windows\system32\SETUPAPI.dll
+0x000007fefddd0000 - 0x000007fefde06000 	C:\Windows\system32\CFGMGR32.dll
+0x000007feffc40000 - 0x000007feffd17000 	C:\Windows\system32\OLEAUT32.dll
+0x000007fefdc00000 - 0x000007fefdc1a000 	C:\Windows\system32\DEVOBJ.dll
+0x000007fefac00000 - 0x000007fefac42000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvdxgiwrapx.dll
+0x000000006d890000 - 0x000000006e048000 	C:\Program Files\Java\jdk1.6.0_25\jre\bin\server\jvm.dll
+0x000007fefb760000 - 0x000007fefb79b000 	C:\Windows\system32\WINMM.dll
+0x000000006d800000 - 0x000000006d80e000 	C:\Program Files\Java\jdk1.6.0_25\jre\bin\verify.dll
+0x000000006d450000 - 0x000000006d477000 	C:\Program Files\Java\jdk1.6.0_25\jre\bin\java.dll
+0x0000000077cc0000 - 0x0000000077cc7000 	C:\Windows\system32\PSAPI.DLL
+0x000000006d850000 - 0x000000006d862000 	C:\Program Files\Java\jdk1.6.0_25\jre\bin\zip.dll
+0x0000000180000000 - 0x0000000180177000 	C:\Program Files\Common Files\Intel\WirelessCommon\Libeay32.dll
+0x000007fefa010000 - 0x000007fefa019000 	C:\Windows\system32\WSOCK32.dll
+0x000007feff0b0000 - 0x000007feff0fd000 	C:\Windows\system32\WS2_32.dll
+0x000007fefe060000 - 0x000007fefe068000 	C:\Windows\system32\NSI.dll
+0x000007fefafb0000 - 0x000007fefafe5000 	C:\Program Files\SlikSvn\bin\libsvnjavahl-1.dll
+0x000000006eec0000 - 0x000000006eecf000 	C:\Program Files\SlikSvn\bin\SlikSvn-libintl-x64.dll
+0x00000000006a0000 - 0x000000000073d000 	C:\Windows\WinSxS\amd64_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.4940_none_08e4299fa83d7e3c\MSVCR90.dll
+0x0000000000370000 - 0x000000000039d000 	C:\Program Files\SlikSvn\bin\SlikSvn-libapr-1.dll
+0x000007fefd270000 - 0x000007fefd2c5000 	C:\Windows\system32\MSWSOCK.dll
+0x000007fefaf70000 - 0x000007fefafb0000 	C:\Program Files\SlikSvn\bin\SlikSvn-svn_client-1.dll
+0x000000006ee60000 - 0x000000006ee9b000 	C:\Program Files\SlikSvn\bin\SlikSvn-libaprutil-1.dll
+0x000007fefa830000 - 0x000007fefa84a000 	C:\Program Files\SlikSvn\bin\SlikSvn-svn_delta-1.dll
+0x000007fef6710000 - 0x000007fef67e2000 	C:\Program Files\SlikSvn\bin\SlikSvn-svn_subr-1.dll
+0x000007fefdc60000 - 0x000007fefddc7000 	C:\Windows\system32\CRYPT32.dll
+0x0000000000530000 - 0x000000000053f000 	C:\Windows\system32\MSASN1.dll
+0x000007fefbea0000 - 0x000007fefbeaf000 	C:\Program Files\SlikSvn\bin\SlikSvn-svn_diff-1.dll
+0x000007fef6230000 - 0x000007fef62a5000 	C:\Program Files\SlikSvn\bin\SlikSvn-svn_ra-1.dll
+0x000007fef66e0000 - 0x000007fef6709000 	C:\Program Files\SlikSvn\bin\SlikSvn-svn_repos-1.dll
+0x000007fef5000000 - 0x000007fef5042000 	C:\Program Files\SlikSvn\bin\SlikSvn-svn_fs-1.dll
+0x0000000013000000 - 0x00000000130e4000 	C:\Program Files\SlikSvn\bin\SlikSvn-DB44-20-x64.dll
+0x0000000065b50000 - 0x0000000065c23000 	C:\Windows\WinSxS\amd64_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.4940_none_08e4299fa83d7e3c\MSVCP90.dll
+0x000007fefd6d0000 - 0x000007fefd6db000 	C:\Windows\system32\Secur32.dll
+0x0000000007930000 - 0x0000000007ab4000 	C:\Program Files\SlikSvn\bin\SlikSvn-LIBEAY32.dll
+0x0000000002480000 - 0x00000000024cf000 	C:\Program Files\SlikSvn\bin\SlikSvn-SSLEAY32.dll
+0x00000000027c0000 - 0x00000000027ec000 	C:\Program Files\SlikSvn\bin\SlikSvn-Sasl21-23-x64.dll
+0x000007fef4fc0000 - 0x000007fef4fff000 	C:\Program Files\SlikSvn\bin\SlikSvn-svn_wc-1.dll
+
+VM Arguments:
+jvm_args: -Xmx256M -Xmx1024M -XX:MaxPermSize=512M -Dfile.encoding=UTF-8 
+java_command: com.sdxz.svn.Synchronizer
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.6.0_25
+CLASSPATH=.
+PATH=C:/Program Files/Java/jdk1.6.0_25/bin/../jre/bin/server;C:/Program Files/Java/jdk1.6.0_25/bin/../jre/bin;C:/Program Files/Java/jdk1.6.0_25/bin/../jre/lib/amd64;D:\Environment\oracle_client\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Lenovo\Access Connections\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.6.0_25\bin;C:\Program Files (x86)\Common Files\Thunder Network\KanKan\Codecs;C:\Program Files\SlikSvn\bin\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.6.0_25\bin;D:\Environment\android-sdk-windows\tools;D:\Environment\eclipse_x64;
+USERNAME=zhaogb
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7601 Service Pack 1
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 4078832k(1337232k free), swap 8155816k(4575012k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (20.0-b11) for windows-amd64 JRE (1.6.0_25-b06), built on Apr 14 2011 00:44:38 by "java_re" with MS VC++ 8.0 (VS2005)
+
+time: Thu Nov 24 15:22:39 2011
+elapsed time: 0 seconds
+

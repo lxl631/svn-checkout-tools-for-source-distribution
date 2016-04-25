@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<node uin="11kb11em1tl4zqdm9zri">
+		<property name="$metaclass" value="Actor"/>
+		<property name="$name" value="Actor1"/>
+	</node>
+	<node uin="nmi41nem1tlmnljq9czi">
+		<property name="$metaclass" value="System Boundary"/>
+		<property name="$name" value="Synchronizer"/>
+		<node uin="-4lk713em1tm8no-gt673e">
+			<property name="$metaclass" value="Use Case"/>
+			<property name="$name" value="Use Case1"/>
+		</node>
+	</node>
+</nodeSet>

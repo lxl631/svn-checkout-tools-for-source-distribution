@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="V574ng9em1lq56f-5tn1my">
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="Package Diagram"/>
+		<reference referencedUin="design:view:::V574ng9em1lq8m3-a46nak">
+			<property name="bounds" value="5,5,85,68"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::V574ng9em1lq8mj-w1xqds">
+			<property name="bounds" value="5,105,85,68"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::V-rqmxokem1tk1dy-q27wrj">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="109,0,109,95"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::Vd7rsvfem1tnuac-9tzj8q">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="237,0,180,131"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+	</view>
+</nodeSet>

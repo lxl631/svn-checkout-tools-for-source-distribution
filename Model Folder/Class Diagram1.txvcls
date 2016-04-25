@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="Vd7rsvfem1tnuac-9tzj8q">
+		<property name="$metaclass" value="Class Diagram"/>
+		<reference referencedUin="jdt:e_class:src:com.sdbys.svn.Synchronizer">
+			<property name="$imported" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="176,234,194,123"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:com.sdbys.svn.SVN">
+			<property name="$imported" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="375,166,200,80"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:com.sdbys.svn.NotifyListener">
+			<property name="$imported" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="375,0,200,147"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:com.sdbys.svn.FilePath">
+			<property name="$imported" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="190,0,166,215"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:com.sdbys.svn.FileCopy">
+			<property name="$imported" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="5,9,166,99"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+	</view>
+</nodeSet>
