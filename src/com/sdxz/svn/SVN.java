@@ -13,8 +13,8 @@ import org.tigris.subversion.svnclientadapter.javasvn.JavaSvnClientAdapterFactor
 
 public class SVN {
 
-	static SVNUrl url = null; 
-	static final String SVNPATH = "svn://10.110.1.24/svn/yaojian/G3/dtd/dtd_food/commonForSdFood/trunk";
+	static SVNUrl url = null;
+	static String SVNPATH = "";
 	static final String USERNAME = "lixlrj";
 	static final String PASSWORD = "lixlrj";
 

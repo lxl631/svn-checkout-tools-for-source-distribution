@@ -11,15 +11,28 @@ import org.tigris.subversion.svnclientadapter.SVNRevision;
 
 public class Synchronizer {
 
-	public static void main(String[] args) {
-		SVN.setup();
+	static String srcPath = "";
+	static String desPath = "E:/Package/SVNTarget/sample";
+
+	public static void syncFile(SvnDomain[] domains) {
+		for (SvnDomain domain : domains) {
+			SVN.SVNPATH = domain.getSvnUrl();
+			srcPath = domain.getLocalRepository();
+			int[] versions = domain.getSvnVersions();
+			for (int i = 0; i < versions.length; i++) {
+				int n = versions[i];
+				start(n);
+			}
+		}
+	}
+
+	public static void run() {
 		// 版本号为单个或多个
 		int[] versions = new int[] { 219166 };
 		for (int i = 0; i < versions.length; i++) {
 			int n = versions[i];
 			start(n);
 		}
-
 		// 版本号范围 如：10000--20000
 		/*
 		 * for (int i=400; i<=450; i++){ start(i); }
@@ -30,8 +43,7 @@ public class Synchronizer {
 		SVNRevision beginNumber = new SVNRevision.Number(number);
 		SVNRevision endNumber = new SVNRevision.Number(number);
 		ISVNLogMessage[] logMessages = SVN.getLogMessages(beginNumber, endNumber);
-		String srcPath = "E:/workspace/dtdCommon4Sd";
-		String desPath = "E:/Package/SVNTarget/sample";
+
 		for (int i = 0; i < logMessages.length; i++) {
 			ISVNLogMessage logMessage = logMessages[i];
 			ISVNLogMessageChangePath[] changedPaths = logMessage.getChangedPaths();
@@ -133,8 +145,17 @@ public class Synchronizer {
 
 	private static void replaceSrcWebRoot(FilePath filePath) {
 		String path = filePath.getContext();
-		path = path.replaceFirst("/src/.*/com/", "/webapp/WEB-INF/classes/com/");
-		System.out.println("\t after replace : " + path + "\t");
+		String spath = path;
+		path = path.replaceFirst("/src.*/com/", "/webapp/WEB-INF/classes/com/");
+		System.out.println("\t befor replace : " + spath + " \t after replace : " + path + "\t");
 		filePath.setContext(path);
+	}
+	
+	public static void main(String[] args) {
+		String path = "/G3/dtd/dtd_food/samplingInspect/trunk/src/com/inspur/";
+//		path = path.replaceFirst("/src.*com/", "+++++");
+		path = path.replaceFirst("/src.*/com/", "/webapp/WEB-INF/classes/com/");
+		System.out.println(  " \t after replace : " + path + "\t");
+		
 	}
 }
