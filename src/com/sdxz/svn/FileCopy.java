@@ -13,6 +13,7 @@ public class FileCopy {
 			java.io.File file_in = new java.io.File(file1);
 			java.io.File file_out = new java.io.File(file2);
 
+			
 			if (file_in.isDirectory())
 				return false;
 
