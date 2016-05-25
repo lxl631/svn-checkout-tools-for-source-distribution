@@ -55,7 +55,7 @@ public class Synchronizer {
 				if (changedPaths[j].getAction() == 'D') {
 					continue;
 				}
-				if (!isSampleProject(path)) {
+				if (!isSameProject(path)) {
 					continue;
 				}
 				FilePath filePath = new FilePath();
@@ -89,7 +89,7 @@ public class Synchronizer {
 	 * @discription: 当前检出的文件是否属于目前的工程。
 	 * @modify:
 	 */
-	static boolean isSampleProject(String path) {
+	static boolean isSameProject(String path) {
 		String svnPath = SVN.SVNPATH;
 		svnPath = svnPath.replaceAll("svn://10.110.1.24/svn/yaojian/", "/").replaceAll("/trunk", "/");
 		String filePath = path.split("trunk")[0];
