@@ -3,8 +3,18 @@ package com.sdxz.svn;
 public class SvnDomain {
 
 	private String username;
-	
+
 	private int[] svnVersions;
+
+	private String localDestLocation;
+
+	public String getLocalDestLocation() {
+		return localDestLocation;
+	}
+
+	public void setLocalDestLocation(String localDestLocation) {
+		this.localDestLocation = localDestLocation;
+	}
 
 	public int[] getSvnVersions() {
 		return svnVersions;

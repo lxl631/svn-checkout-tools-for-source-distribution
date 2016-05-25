@@ -15,8 +15,8 @@ public class SVN {
 
 	static SVNUrl url = null;
 	static String SVNPATH = "";
-	static final String USERNAME = "lixlrj";
-	static final String PASSWORD = "lixlrj";
+	static String USERNAME = "";
+	static String PASSWORD = "";
 
 	public static void setup() {
 		try {

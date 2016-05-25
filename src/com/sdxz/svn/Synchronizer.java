@@ -12,11 +12,14 @@ import org.tigris.subversion.svnclientadapter.SVNRevision;
 public class Synchronizer {
 
 	static String srcPath = "";
-	static String desPath = "E:/Package/SVNTarget/sample";
+	static String desPath = "";
 
 	public static void syncFile(SvnDomain[] domains) {
 		for (SvnDomain domain : domains) {
 			SVN.SVNPATH = domain.getSvnUrl();
+			SVN.USERNAME = domain.getUsername();
+			SVN.PASSWORD = domain.getPassword();
+			desPath = domain.getLocalDestLocation();
 			srcPath = domain.getLocalRepository();
 			int[] versions = domain.getSvnVersions();
 			for (int i = 0; i < versions.length; i++) {
@@ -150,12 +153,12 @@ public class Synchronizer {
 		System.out.println("\t befor replace : " + spath + " \t after replace : " + path + "\t");
 		filePath.setContext(path);
 	}
-	
+
 	public static void main(String[] args) {
 		String path = "/G3/dtd/dtd_food/samplingInspect/trunk/src/com/inspur/";
-//		path = path.replaceFirst("/src.*com/", "+++++");
+		// path = path.replaceFirst("/src.*com/", "+++++");
 		path = path.replaceFirst("/src.*/com/", "/webapp/WEB-INF/classes/com/");
-		System.out.println(  " \t after replace : " + path + "\t");
-		
+		System.out.println(" \t after replace : " + path + "\t");
+
 	}
 }
