@@ -13,6 +13,11 @@ import org.tigris.subversion.svnclientadapter.javasvn.JavaSvnClientAdapterFactor
 
 public class SVN {
 
+	static SVNUrl url = null;
+	static final String SVNPATH = "svn://10.110.1.24/svn/yaojian/G3/dtd/dtd_food/commonForSdFood/trunk";
+	static final String USERNAME = "lixlrj";
+	static final String PASSWORD = "lixlrj";
+
 	public static void setup() {
 		try {
 			JhlClientAdapterFactory.setup();
@@ -24,7 +29,6 @@ public class SVN {
 		} catch (SVNClientException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	public static ISVNLogMessage[] getLogMessages(SVNRevision beginNumber, SVNRevision endNumber) {
@@ -35,16 +39,14 @@ public class SVN {
 		} catch (SVNClientException e) {
 			e.printStackTrace();
 		}
-		//设置用户名和密码
-		svnClient.setUsername("lixlrj");
-		svnClient.setPassword("lixlrj");
-		// svnClient.setUsername("baizheng");
-		// svnClient.setPassword("9719048");
-		SVNUrl url = null;
+		// 设置用户名和密码
+		svnClient.setUsername(USERNAME);
+		svnClient.setPassword(PASSWORD);
+
 		SVNRevision beginRevision = beginNumber;
 		SVNRevision endRevision = endNumber;
 		try {
-			url = new SVNUrl("svn://10.110.1.24/svn/yaojian/G3/dtd/dtd_food/samplingInspect/trunk");
+			url = new SVNUrl(SVNPATH);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}

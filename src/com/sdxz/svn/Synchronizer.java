@@ -14,7 +14,7 @@ public class Synchronizer {
 	public static void main(String[] args) {
 		SVN.setup();
 		// 版本号为单个或多个
-		int[] versions = new int[] { 161936, 160989, 190215 };
+		int[] versions = new int[] { 219166 };
 		for (int i = 0; i < versions.length; i++) {
 			int n = versions[i];
 			start(n);
@@ -30,16 +30,20 @@ public class Synchronizer {
 		SVNRevision beginNumber = new SVNRevision.Number(number);
 		SVNRevision endNumber = new SVNRevision.Number(number);
 		ISVNLogMessage[] logMessages = SVN.getLogMessages(beginNumber, endNumber);
-		String srcPath = "E:/workspace/samplingInspect/";
-		String desPath = "E:/DevelopEnvironment/SVNTarget/sample";
+		String srcPath = "E:/workspace/dtdCommon4Sd";
+		String desPath = "E:/Package/SVNTarget/sample";
 		for (int i = 0; i < logMessages.length; i++) {
 			ISVNLogMessage logMessage = logMessages[i];
 			ISVNLogMessageChangePath[] changedPaths = logMessage.getChangedPaths();
 			System.out.println(logMessage.getRevision() + "\t" + logMessage.getAuthor() + "\t");
 			for (int j = 0; j < changedPaths.length; j++) {
 				String path = changedPaths[j].getPath();
-				System.out.println("\t path \t" + path);
+				System.out.println("\t path： \t" + path);
+
 				if (changedPaths[j].getAction() == 'D') {
+					continue;
+				}
+				if (!isSampleProject(path)) {
 					continue;
 				}
 				FilePath filePath = new FilePath();
@@ -67,15 +71,28 @@ public class Synchronizer {
 		}
 	}
 
+	/**
+	 * @author:李小龙
+	 * @createTime:2016年5月25日下午3:25:20
+	 * @discription: 当前检出的文件是否属于目前的工程。
+	 * @modify:
+	 */
+	static boolean isSampleProject(String path) {
+		String svnPath = SVN.SVNPATH;
+		svnPath = svnPath.replaceAll("svn://10.110.1.24/svn/yaojian/", "/").replaceAll("/trunk", "/");
+		String filePath = path.split("trunk")[0];
+		return svnPath.equals(filePath);
+	}
+
 	private static void copy(FilePath file, String desPath) {
 		String fileName = file.getContext() + FilePath.separator + file.getFileName();
 		String sourcePath = file.getBase() + fileName;
 		String destPath = desPath + fileName;
 		if (new File(sourcePath).exists()) {
-			System.out.println("\t file found. copy from :\t" + sourcePath);
+			System.out.println("\t file found. copy from :\t" + sourcePath + " \n");
 			FileCopy.copy(sourcePath, destPath);
 		} else {
-			System.err.println("\t Not found: \t" + sourcePath);
+			System.err.println("\t Not found: \t" + sourcePath + "\n");
 		}
 	}
 
@@ -117,7 +134,7 @@ public class Synchronizer {
 	private static void replaceSrcWebRoot(FilePath filePath) {
 		String path = filePath.getContext();
 		path = path.replaceFirst("/src/.*/com/", "/webapp/WEB-INF/classes/com/");
-		System.err.println(path);
+		System.out.println("\t after replace : " + path + "\t");
 		filePath.setContext(path);
 	}
 }
