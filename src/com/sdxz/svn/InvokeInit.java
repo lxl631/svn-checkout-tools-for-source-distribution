@@ -1,8 +1,8 @@
 package com.sdxz.svn;
 
 public class InvokeInit {
-	static String USERNAME = "lixlrj"; // svn用户名
-	static String PASSWORD = "lixlrj"; // svn密码
+	static String USERNAME = "username"; // svn用户名
+	static String PASSWORD = "password"; // svn密码
 	static String LOCALDESTLOCATION = "E:/Package/SVNTarget/sample"; // 本地打包后的路径。
 
 	public static void main(String[] args) {
